@@ -60,7 +60,7 @@ public class SwtLwjglGraphics implements Graphics {
         glData.stencilSize = config.stencil;
         glData.samples = config.samples;
         glData.doubleBuffer = true;
-        glCanvas = new GLCanvas(parent, SWT.BORDER, glData);
+        glCanvas = new GLCanvas(parent, SWT.FLAT, glData);
         if (parent.getLayout() instanceof GridLayout) glCanvas.setLayoutData(new GridData(GridData.FILL, GridData.FILL, true, true));
         glCanvas.addControlListener(new ControlAdapter() {
             @Override
